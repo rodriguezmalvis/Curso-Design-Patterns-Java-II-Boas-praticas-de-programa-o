@@ -1,5 +1,7 @@
 package capitulo4;
 
+import capitulo5.Visitor;
+
 public class Multiplicacao implements Expressao {
 
 	private Expressao esquerda;
@@ -14,6 +16,12 @@ public class Multiplicacao implements Expressao {
 	@Override
 	public int avalia() {
 		return esquerda.avalia() * direita.avalia();
+	}
+
+	@Override
+	public void aceita(Visitor impresora) {
+		// TODO Auto-generated method stub
+		
 	}
 
 }
